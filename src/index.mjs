@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 app.get("/", (request, response) =>{
 
-    response.send({msg: "Hello"});
+    response.status(201).send({msg: "Hello"});
 
 });
 
