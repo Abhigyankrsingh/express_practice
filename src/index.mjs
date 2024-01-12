@@ -12,7 +12,7 @@ app.get("/", (request, response) =>{
 
 });
 
-app.get("/api/users",() =>{
+app.get("/api/users",(request, response) =>{
    response.send([
   {id:1,  username: "abhi" , displayName: "Abhi"},
 
