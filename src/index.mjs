@@ -34,10 +34,15 @@ app.get("/api/products", (request, response)=> {
             cost : 34
         },
 
-        
+
 
     ])
-})
+});
+
+app.get("/api/users/:id", (request, response)=> {
+
+    console.log(request.params);
+});
 
 app.listen(PORT, () =>{
 
