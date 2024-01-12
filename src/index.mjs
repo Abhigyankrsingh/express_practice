@@ -5,6 +5,15 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+const mockUsers = [
+    {id:1,  username: "abhi" , displayName: "Abhi"},
+  
+    {id:2, username: "singh", displayName: "Singh"},
+  
+    {id:3, username: "Jio", displayName: "JIO"}
+  
+  
+     ];
 
 app.get("/", (request, response) =>{
 
@@ -13,15 +22,7 @@ app.get("/", (request, response) =>{
 });
 
 app.get("/api/users",(request, response) =>{
-   response.send([
-  {id:1,  username: "abhi" , displayName: "Abhi"},
-
-  {id:2, username: "singh", displayName: "Singh"},
-
-  {id:3, username: "Jio", displayName: "JIO"}
-
-
-   ]);
+   response.send();
 } );
 
 app.get("/api/products", (request, response)=> {
