@@ -24,6 +24,20 @@ app.get("/api/users",(request, response) =>{
    ]);
 } );
 
+app.get("/api/products", (request, response)=> {
+
+    response.send([
+ 
+        {
+            id: 1,
+            productname: "Chicken",
+            cost : 34
+        },
+
+        
+
+    ])
+})
 
 app.listen(PORT, () =>{
 
