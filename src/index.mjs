@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { response } from 'express';
 
 const app = express();
 
@@ -11,6 +11,18 @@ app.get("/", (request, response) =>{
     response.status(202).send({msg: "Hello"});
 
 });
+
+app.get("/api/users",() =>{
+   response.send([
+  {id:1,  username: "abhi" , displayName: "Abhi"},
+
+  {id:2, username: "singh", displayName: "Singh"},
+
+  {id:3, username: "Jio", displayName: "JIO"}
+
+
+   ]);
+} );
 
 
 app.listen(PORT, () =>{
