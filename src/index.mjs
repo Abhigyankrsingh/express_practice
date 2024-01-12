@@ -22,7 +22,7 @@ app.get("/", (request, response) =>{
 });
 
 app.get("/api/users",(request, response) =>{
-   response.send();
+   response.send(mockUsers);
 } );
 
 app.get("/api/products", (request, response)=> {
